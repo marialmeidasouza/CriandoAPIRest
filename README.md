@@ -8,6 +8,10 @@ Java RESTful API
 classDiagram
     class Usuario {
         +String nome
+        +Conta conta
+        +Operacoes[] operacoes
+        +Cartao cartao
+        
     }
 
     class Conta {
