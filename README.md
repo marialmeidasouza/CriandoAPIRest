@@ -6,31 +6,15 @@ Java RESTful API
 
 ``` mermaid
 classDiagram
-    class Usuario {
+    class ListaDeTarefas {
         +String nome
-        +Conta conta
-        +Operacoes[] operacoes
-        +Cartao cartao
-        
+        +Tarefa[] tarefa
     }
 
-    class Conta {
-        +String numero
-        +String agencia
-        +Float saldo
-        +Float limite
-    }
-
-    class Operacoes {
-        +String icone
+    class Tarefa {
+        +String nome
         +String descricao
+        +String conclusao
     }
-
-    class Cartao {
-        +String numero
-        +Float limite
-    }
-    Usuario "1"*--"1" Conta 
-    Usuario  "1"*--"n" Operacoes
-    Usuario "1" *--"1" Cartao 
+ListaDeTarefas "1" --> "n" Tarefa : contém
 ```
